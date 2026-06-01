@@ -7,16 +7,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#000000",
-        secondary: "#F07E25",
-        "secondary-container": "#F07E25",
-        background: "#f8f9ff",
-        surface: "#ffffff",
+        primary: "#050505", // Deep black
+        charcoal: "#0B0B0D",
+        secondary: "#F07E25", // Pulse orange
+        "deep-orange": "#F1620F",
+        background: "#F6F7F9", // Light grey
+        surface: "#FFFFFF", // White
+        "text-grey": "#6B7280",
+        
+        // Keep these for compatibility if any components rely on them implicitly before being refactored
         "surface-variant": "#f1f5f9",
         outline: "#747878",
         "outline-variant": "#e2e8f0",
-        "on-surface": "#0b1c30",
-        "on-surface-variant": "#444748",
+        "on-surface": "#050505",
+        "on-surface-variant": "#6B7280",
         "on-primary": "#ffffff",
         "on-secondary": "#ffffff",
       },

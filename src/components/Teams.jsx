@@ -4,52 +4,55 @@ export default function Teams() {
   const teams = [
     {
       name: 'Brand Leaders',
-      desc: 'Ensure total consistency across global markets with automated governance and asset management.',
+      desc: 'A live view of brand health, marketing efficiency, campaign impact, and governance.',
       icon: 'workspace_premium'
     },
     {
       name: 'Marketing Heads',
-      desc: 'Align strategic vision with execution speed across entire regional clusters and product lines.',
+      desc: 'A connected system to align strategy, agencies, planning, execution, and measurement.',
       icon: 'leaderboard'
     },
     {
       name: 'Media Teams',
-      desc: 'Optimise media spend in real-time based on live intelligence signals and competitive shifts.',
+      desc: 'Structured planning, budget scenarios, approvals, and planned-versus-delivered visibility.',
       icon: 'tv'
     },
     {
-      name: 'Insight Analysts',
-      desc: 'Extract deep market signals and competitive intelligence without manual data crunching.',
+      name: 'Performance Teams',
+      desc: 'Live optimisation signals across campaigns, audiences, and engagement flows.',
+      icon: 'speed'
+    },
+    {
+      name: 'Consumer Insight Teams',
+      desc: 'Brand lift, recall, exposure, audience response, and campaign learning.',
       icon: 'query_stats'
     },
     {
-      name: 'Global Agencies',
-      desc: 'Collaborate seamlessly with brand owners on a unified operating system for planning and reporting.',
+      name: 'Agencies & Partners',
+      desc: 'Clearer briefs, faster approvals, shared workflows, and stronger accountability.',
       icon: 'handshake'
-    },
-    {
-      name: 'Finance & Ops',
-      desc: 'Audit marketing efficiency and budget compliance with transparent, live performance data.',
-      icon: 'account_balance'
     }
   ]
 
   return (
-    <section className="py-16 lg:py-20 bg-[#fcfcfc] select-none" id="teams">
+    <section className="py-24 lg:py-32 bg-[#fcfcfc] select-none" id="teams">
       <div className="max-w-container-max mx-auto px-6 lg:px-margin-desktop">
         {/* Header */}
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-primary">
+        <div className="text-center mb-16 lg:mb-24">
+          <h2 className="text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-primary mb-6">
             One platform for every team.
           </h2>
+          <p className="text-text-grey text-lg sm:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
+            Pulse 360 gives each team the visibility, structure, and intelligence they need — while keeping everyone connected to the same marketing system.
+          </p>
         </div>
 
-        {/* Grid Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Grid Cards (3x2 on desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teams.map((t, idx) => (
             <div 
               key={idx} 
-              className="p-10 rounded-[2.5rem] bg-white border border-black/5 hover:border-secondary transition-all hover:shadow-2xl group cursor-default text-left flex flex-col justify-between"
+              className="p-10 lg:p-12 rounded-[2.5rem] bg-white border border-black/5 hover:border-secondary/40 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group cursor-default text-left flex flex-col justify-between"
             >
               <div>
                 {/* Animated Icon Box */}

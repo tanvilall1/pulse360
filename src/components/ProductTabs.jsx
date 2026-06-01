@@ -14,311 +14,451 @@ export default function ProductTabs() {
 
   const tabData = {
     brand: {
-      category: 'Global Governance',
-      title: 'The ultimate source of truth for global brand assets.',
-      desc: 'Automate brand governance with a living digital brand book that connects directly to your execution channels.',
+      headline: 'Govern brand consistency at scale.',
+      desc: 'Brand Book codifies positioning, tone, messaging rules, communication principles, and risk thresholds so every campaign stays consistent, controlled, and compliant.',
       features: [
-        'Automated asset compliance checks',
-        'Real-time style guide distribution',
-        'Dynamic DAM integration'
+        'Brand positioning and narrative framework',
+        'Tone of voice and messaging principles',
+        'Content and communication guardrails',
+        'Brand risk and compliance thresholds',
+        'Cross-channel consistency rules'
       ],
-      tags: ['Compliance AI', 'Global Sync'],
-      visual: (
-        <div className="w-full h-full bg-white rounded-xl shadow-inner border border-black/5 overflow-hidden flex flex-col">
-          <div className="h-12 border-b border-black/5 flex items-center px-6 gap-3 shrink-0 bg-slate-50/50">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-            <div className="flex-1"></div>
-            <div className="text-[9px] font-mono font-bold text-black/30 uppercase tracking-widest">Brand_Book_v4.2</div>
-          </div>
-          <div className="flex-1 p-8 sm:p-10 flex flex-col justify-center items-center gap-8 bg-white">
-            <motion.div 
-              animate={{ scale: [1, 1.03, 1] }}
-              transition={{ repeat: Infinity, duration: 4 }}
-              className="w-24 h-24 bg-primary rounded-2xl flex items-center justify-center text-white text-3xl font-black shadow-lg"
-            >
-              P
-            </motion.div>
-            <div className="space-y-3 w-full max-w-[200px]">
-              <div className="h-2 bg-black/5 rounded-full w-full"></div>
-              <div className="h-2 bg-black/5 rounded-full w-3/4 mx-auto"></div>
-            </div>
-            <div className="grid grid-cols-4 gap-2 w-full mt-4">
-              <div className="aspect-square bg-secondary/15 rounded-lg border border-secondary/20"></div>
-              <div className="aspect-square bg-black/5 rounded-lg"></div>
-              <div className="aspect-square bg-black/5 rounded-lg"></div>
-              <div className="aspect-square bg-black/5 rounded-lg"></div>
-            </div>
-          </div>
-        </div>
-      )
+      chips: ['Brand Strategy', 'Messaging Rules', 'Compliance Guardrails']
     },
     scout: {
-      category: 'Market Intelligence',
-      title: 'Real-time competitive intelligence and market dynamics.',
-      desc: 'Deploy automated bots to track competitor moves, category shifts, and live sentiment analysis.',
+      headline: 'See competitor moves before they become market shifts.',
+      desc: 'Pulse Scout tracks competitor activity, creative patterns, visibility trends, share of voice, and market movement across search engines and digital publishers.',
       features: [
-        'Competitor creative monitoring',
-        'Market sentiment tracking',
-        'Share of voice analysis'
+        'Competitive ad tracking',
+        'Creative and messaging visibility',
+        'Share of voice analysis',
+        'Market activity monitoring',
+        'Trend and change detection'
       ],
-      tags: ['SOV Tracking', 'Ad Intel'],
-      visual: (
-        <div className="w-full h-full bg-white rounded-xl shadow-inner border border-black/5 overflow-hidden flex flex-col">
-          <div className="h-12 border-b border-black/5 flex items-center px-6 gap-3 shrink-0 bg-slate-50/50">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-            <div className="flex-1"></div>
-            <div className="text-[9px] font-mono font-bold text-black/30 uppercase tracking-widest font-mono">SCOUT_RADAR_SYNC</div>
-          </div>
-          <div className="flex-1 p-6 sm:p-8 bg-slate-50 grid grid-cols-2 gap-4">
-            <div className="bg-white p-4 rounded-xl border border-black/5 shadow-sm relative overflow-hidden flex flex-col justify-between">
-              <div className="w-full h-20 bg-slate-100 rounded-lg flex items-center justify-center relative overflow-hidden">
-                <span className="material-symbols-outlined text-4xl text-secondary/30">image</span>
-                <div className="absolute inset-0 border border-dashed border-secondary/50 rounded-lg animate-pulse" />
-              </div>
-              <div className="space-y-1.5 mt-3">
-                <div className="h-2 bg-black/10 rounded-full w-3/4"></div>
-                <div className="h-1.5 bg-black/5 rounded-full w-1/2"></div>
-              </div>
-            </div>
-            <div className="bg-white p-4 rounded-xl border border-black/5 shadow-sm flex flex-col justify-between">
-              <div className="flex-1 flex flex-col justify-center items-center gap-3">
-                <div className="w-14 h-14 rounded-full border-4 border-emerald-500/20 border-t-emerald-500 flex items-center justify-center font-bold text-xs text-emerald-500 animate-[spin_8s_linear_infinite]">
-                  +42%
-                </div>
-                <span className="text-[9px] font-bold text-black/40 uppercase tracking-wider">SENTIMENT INDEX</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )
+      chips: ['Competitor Tracking', 'Creative Visibility', 'Market Trends']
     },
     plan: {
-      category: 'Media Mix Optimization',
-      title: 'Optimise media mix allocation with scenario modeling.',
-      desc: 'Simulate campaign performance outcomes before spending. Turn media briefs into structured investment plans.',
+      headline: 'Turn briefs into confident media decisions.',
+      desc: 'Pulse Plan transforms campaign briefs into structured, intelligence-led media plans using market context, historical performance, budget logic, and scenario planning.',
       features: [
-        'AI Scenario modeling',
-        'Cross-channel budget weights',
-        'Predictive lift graphs'
+        'Brief-to-plan workflows',
+        'Scenario-based budget modelling',
+        'Media mix planning',
+        'Channel allocation logic',
+        'Investment planning by objective'
       ],
-      tags: ['Media Mix', 'Scenario Dev'],
-      visual: (
-        <div className="w-full h-full bg-white rounded-xl shadow-inner border border-black/5 overflow-hidden flex flex-col">
-          <div className="h-12 border-b border-black/5 flex items-center px-6 gap-3 shrink-0 bg-slate-50/50">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-            <div className="flex-1"></div>
-            <div className="text-[9px] font-mono font-bold text-black/30 uppercase tracking-widest font-mono">SCENARIO_MODELER</div>
-          </div>
-          <div className="flex-1 p-6 sm:p-8 bg-white flex flex-col justify-between gap-6">
-            <div className="space-y-4">
-              <div className="space-y-1">
-                <div className="flex justify-between text-[9px] font-bold text-black/50">
-                  <span>SEARCH & PAID</span>
-                  <span className="text-secondary">$840,000</span>
-                </div>
-                <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <div className="h-full bg-secondary w-3/4 rounded-full" />
-                </div>
-              </div>
-              <div className="space-y-1">
-                <div className="flex justify-between text-[9px] font-bold text-black/50">
-                  <span>SOCIAL & DISPLAY</span>
-                  <span className="text-emerald-500">$1,200,000</span>
-                </div>
-                <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <div className="h-full bg-emerald-500 w-[90%] rounded-full" />
-                </div>
-              </div>
-            </div>
-            
-            <div className="h-24 border border-black/5 rounded-xl bg-slate-50/50 overflow-hidden relative">
-              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 300 80">
-                <path d="M 0,60 Q 60,20 120,40 T 240,10 T 300,30" fill="none" stroke="#F07E25" strokeWidth="2" />
-                <path d="M 0,60 Q 60,20 120,40 T 240,10 T 300,30 L 300,80 L 0,80 Z" fill="#F07E25" fillOpacity="0.05" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      )
+      chips: ['Media Mix', 'Budget Scenarios', 'Plan Approvals']
     },
     engage: {
-      category: 'Audience Activation',
-      title: 'Engage audience cohorts through automated channels.',
-      desc: 'Build conditional triggers across messaging, email, and live WhatsApp activations automatically.',
+      headline: 'Make WhatsApp a measurable engagement channel.',
+      desc: 'Pulse Engage helps brands create, schedule, approve, target, and measure WhatsApp Business API campaigns from one controlled system.',
       features: [
-        'Conditional cohort builders',
-        'WhatsApp Business activations',
-        'Triggered multi-channel routing'
+        'Campaign creation and scheduling',
+        'Template and approval management',
+        'Audience uploads and segmentation',
+        'Opt-in and compliance controls',
+        'Message delivery tracking'
       ],
-      tags: ['Activations', 'Engage Core'],
-      visual: (
-        <div className="w-full h-full bg-white rounded-xl shadow-inner border border-black/5 overflow-hidden flex flex-col">
-          <div className="h-12 border-b border-black/5 flex items-center px-6 gap-3 shrink-0 bg-slate-50/50">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-            <div className="flex-1"></div>
-            <div className="text-[9px] font-mono font-bold text-black/30 uppercase tracking-widest font-mono">FLOW_ACTIVATOR_V1</div>
-          </div>
-          <div className="flex-1 p-6 sm:p-8 bg-slate-50 flex flex-col justify-center items-center gap-4">
-            <div className="flex items-center gap-3 w-full max-w-[280px] p-3 rounded-xl bg-white border border-black/5 shadow-sm">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-sm font-bold">chat</span>
-              </div>
-              <div className="flex-1 text-left">
-                <p className="text-[9px] font-bold text-black/30 uppercase tracking-wider">TRIGGER</p>
-                <p className="text-[11px] font-black text-on-surface">Stripe Checkout Success</p>
-              </div>
-            </div>
-            <div className="w-0.5 h-6 bg-secondary/30" />
-            <div className="flex items-center gap-3 w-full max-w-[280px] p-3 rounded-xl bg-white border border-black/5 shadow-sm border-l-2 border-l-secondary">
-              <div className="w-8 h-8 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-sm font-bold">forward</span>
-              </div>
-              <div className="flex-1 text-left">
-                <p className="text-[9px] font-bold text-secondary uppercase tracking-wider">ACTION</p>
-                <p className="text-[11px] font-black text-on-surface">WhatsApp Onboarding Dispatch</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )
+      chips: ['WhatsApp Campaigns', 'Audience Segments', 'Delivery Tracking']
     },
     shift: {
-      category: 'ROI Attribution',
-      title: 'Connect campaign execution directly to financial outcomes.',
-      desc: 'Trace complete conversion paths from initial competitive signal to transaction, attributing ROI perfectly.',
+      headline: 'Measure what is working while campaigns are live.',
+      desc: 'Pulse Shift gives real-time visibility into campaign exposure, audience response, brand lift, and optimisation opportunities while campaigns are still active.',
       features: [
-        'Multi-touch conversion tracking',
-        'Raw clickstream tracking',
-        'Executive ROI dashboards'
+        'Real-time performance dashboards',
+        'Exposure and reach tracking',
+        'Audience response signals',
+        'Brand lift measurement',
+        'Live optimisation indicators'
       ],
-      tags: ['Attribution', 'ROI Tracking'],
-      visual: (
-        <div className="w-full h-full bg-white rounded-xl shadow-inner border border-black/5 overflow-hidden flex flex-col">
-          <div className="h-12 border-b border-black/5 flex items-center px-6 gap-3 shrink-0 bg-slate-50/50">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-            <div className="flex-1"></div>
-            <div className="text-[9px] font-mono font-bold text-black/30 uppercase tracking-widest font-mono">ATTRIBUTION_ENGINE</div>
-          </div>
-          <div className="flex-1 p-6 sm:p-8 bg-white flex flex-col justify-between select-none">
-            <div className="flex justify-between items-center bg-slate-50 p-4 rounded-xl border border-black/5">
-              <div className="text-left">
-                <p className="text-[9px] font-bold text-black/30 uppercase tracking-wider">CAMPAIGN ROI</p>
-                <p className="text-2xl font-black text-secondary">4.8x</p>
+      chips: ['Brand Lift', 'Live Dashboards', 'Optimisation Signals']
+    }
+  }
+
+  const renderVisual = (id) => {
+    switch (id) {
+      case 'brand':
+        return (
+          <div className="w-full h-full flex flex-col gap-4 text-left p-2 sm:p-4">
+            {/* Header / Brand Rules */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-[10px] font-black uppercase tracking-wider text-black/50">Brand Rules</span>
+                <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[8px] font-bold uppercase tracking-wider">COMPLIANT</span>
               </div>
-              <div className="px-3 py-1 bg-emerald-500/10 text-emerald-600 text-[9px] font-mono font-bold rounded-lg border border-emerald-500/20">
-                +18% LIFT
+              <p className="text-xs font-bold text-primary">Rule #04: Brand Narrative Claim Guardrail</p>
+              <p className="text-[10px] text-text-grey mt-1">Ensure claims on campaign budgets use approved wording.</p>
+            </div>
+            {/* Tone Guide */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5 flex justify-between items-center">
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-1">Tone Guide</span>
+                <p className="text-xs font-bold text-primary">Confident, Precise, Enterprise-ready</p>
+              </div>
+              <span className="material-symbols-outlined text-secondary">tune</span>
+            </div>
+            {/* Approved Claims */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-2">Approved Claims Library</span>
+              <div className="space-y-1.5">
+                <div className="p-2 bg-white rounded border border-black/5 text-[10px] font-medium text-primary">"The only connected operating system for modern marketing teams."</div>
+                <div className="p-2 bg-white rounded border border-black/5 text-[10px] font-medium text-primary">"Drive category growth with brand intelligence & media planning."</div>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-2 w-full mt-4 font-mono text-[8px] text-black/40 text-left">
-              <div className="p-2 bg-slate-50 rounded-lg border border-black/5">
-                <p className="font-bold text-primary">Google Ads</p>
-                <p className="mt-1">32% weight</p>
-              </div>
-              <div className="p-2 bg-slate-50 rounded-lg border border-black/5">
-                <p className="font-bold text-primary">WhatsApp</p>
-                <p className="mt-1">45% weight</p>
-              </div>
-              <div className="p-2 bg-slate-50 rounded-lg border border-black/5">
-                <p className="font-bold text-primary">Display</p>
-                <p className="mt-1">23% weight</p>
+            {/* Risk Flags */}
+            <div className="bg-red-50 p-4 rounded-2xl border border-red-100 flex items-start gap-2.5">
+              <span className="material-symbols-outlined text-red-500 text-sm mt-0.5">warning</span>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-wider text-red-700 block">Risk Flag Raised</span>
+                <p className="text-[10px] text-red-800 font-bold mt-0.5">Unapproved competitor comparison claim found in media brief #03.</p>
               </div>
             </div>
           </div>
-        </div>
-      )
+        )
+      case 'scout':
+        return (
+          <div className="w-full h-full flex flex-col gap-4 text-left p-2 sm:p-4">
+            {/* Share of Voice */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-3">Share of Voice Index</span>
+              <div className="space-y-2">
+                <div>
+                  <div className="flex justify-between text-[10px] font-bold text-primary mb-1"><span>Pulse 360</span><span>42%</span></div>
+                  <div className="w-full h-1.5 bg-black/5 rounded-full overflow-hidden"><div className="h-full bg-secondary w-[42%]"></div></div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-[10px] font-bold text-primary mb-1"><span>Competitor Alpha</span><span>28%</span></div>
+                  <div className="w-full h-1.5 bg-black/5 rounded-full overflow-hidden"><div className="h-full bg-slate-400 w-[28%]"></div></div>
+                </div>
+                <div>
+                  <div className="flex justify-between text-[10px] font-bold text-primary mb-1"><span>Competitor Beta</span><span>15%</span></div>
+                  <div className="w-full h-1.5 bg-black/5 rounded-full overflow-hidden"><div className="h-full bg-slate-300 w-[15%]"></div></div>
+                </div>
+              </div>
+            </div>
+            {/* Competitor Timeline */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-2">Competitor Activity Feed</span>
+              <div className="space-y-2">
+                <div className="flex gap-2 text-[10px]">
+                  <span className="text-secondary font-black">10:42 AM</span>
+                  <span className="text-primary font-bold">Alpha launched 12 new video creatives on YouTube.</span>
+                </div>
+                <div className="flex gap-2 text-[10px]">
+                  <span className="text-slate-400 font-black">Yesterday</span>
+                  <span className="text-primary">Beta increased search bids in category "Marketing intelligence".</span>
+                </div>
+              </div>
+            </div>
+            {/* Creative Examples */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-2">Creative Visual Tracking</span>
+              <div className="grid grid-cols-3 gap-2">
+                <div className="aspect-video bg-slate-200 rounded border border-black/5 flex items-center justify-center text-[8px] font-bold text-black/40">Creative A</div>
+                <div className="aspect-video bg-slate-200 rounded border border-black/5 flex items-center justify-center text-[8px] font-bold text-black/40">Creative B</div>
+                <div className="aspect-video bg-slate-200 rounded border border-black/5 flex items-center justify-center text-[8px] font-bold text-black/40">Creative C</div>
+              </div>
+            </div>
+            {/* Market Alert */}
+            <div className="bg-amber-50 p-3.5 rounded-2xl border border-amber-100 flex gap-2">
+              <span className="material-symbols-outlined text-amber-600 text-sm mt-0.5">notification_important</span>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-wider text-amber-700">Market bidding alert</span>
+                <p className="text-[9px] text-amber-800 font-bold mt-0.5">Search auction bids spiked 18% in media operating system segment.</p>
+              </div>
+            </div>
+          </div>
+        )
+      case 'plan':
+        return (
+          <div className="w-full h-full flex flex-col gap-4 text-left p-2 sm:p-4">
+            {/* Campaign Brief */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-2">Campaign Brief</span>
+              <div className="grid grid-cols-2 gap-2 text-[10px]">
+                <div><span className="text-black/40 block">Campaign Objective</span><span className="font-bold text-primary">Brand recall & leads</span></div>
+                <div><span className="text-black/40 block">Target Budget</span><span className="font-bold text-primary">$450,000 USD</span></div>
+              </div>
+            </div>
+            {/* Budget Split & Media Mix */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-3">Scenario B: Recommended Media Mix</span>
+              <div className="space-y-2">
+                <div className="flex justify-between items-center text-[10px]">
+                  <span className="font-bold text-primary">Connected TV (CTV)</span>
+                  <span className="text-secondary font-black">40% ($180k)</span>
+                </div>
+                <div className="flex justify-between items-center text-[10px]">
+                  <span className="font-bold text-primary">Social (LinkedIn & Meta)</span>
+                  <span className="text-secondary font-black">35% ($157.5k)</span>
+                </div>
+                <div className="flex justify-between items-center text-[10px]">
+                  <span className="font-bold text-primary">Search & Programmatic</span>
+                  <span className="text-secondary font-black">25% ($112.5k)</span>
+                </div>
+              </div>
+            </div>
+            {/* Scenario Comparison */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-white p-3.5 rounded-2xl border border-secondary/30 shadow-sm relative">
+                <div className="absolute top-2.5 right-2.5 w-1.5 h-1.5 rounded-full bg-secondary"></div>
+                <p className="text-[9px] font-black uppercase tracking-wider text-secondary">Scenario A (Standard)</p>
+                <p className="text-xs font-bold text-primary mt-1">4.2M Est. Reach</p>
+                <p className="text-[8px] text-text-grey mt-0.5">+8.4% Brand lift</p>
+              </div>
+              <div className="bg-slate-50 p-3.5 rounded-2xl border border-black/5">
+                <p className="text-[9px] font-black uppercase tracking-wider text-black/40">Scenario B (Optimised)</p>
+                <p className="text-xs font-bold text-primary mt-1">5.8M Est. Reach</p>
+                <p className="text-[8px] text-text-grey mt-0.5">+14.2% Brand lift</p>
+              </div>
+            </div>
+          </div>
+        )
+      case 'engage':
+        return (
+          <div className="w-full h-full flex flex-col gap-4 text-left p-2 sm:p-4">
+            {/* Message Template Preview */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-2">WhatsApp Message Template</span>
+              <div className="bg-[#E7F3EF] p-3 rounded-lg border border-[#BDE0D4] max-w-[220px] shadow-sm">
+                <p className="text-[9px] text-primary/80 font-bold">Pulse 360 Official</p>
+                <p className="text-[10px] text-primary leading-snug mt-1 font-medium font-body">Hi {"{{"}name{"}}"}, ready to elevate your campaign orchestration? Discover scenario planning today.</p>
+                <div className="mt-2 pt-1.5 border-t border-[#BDE0D4] text-center text-[9px] font-black text-emerald-800">
+                  Book a Demo
+                </div>
+              </div>
+            </div>
+            {/* Audience Segments & Opt-in Badge */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-slate-50 p-3 rounded-2xl border border-black/5">
+                <span className="text-[9px] font-black uppercase tracking-wider text-black/40 block mb-1">Target Segment</span>
+                <p className="text-xs font-bold text-primary">Media Leaders (Enterprise)</p>
+                <p className="text-[8px] text-text-grey mt-0.5">14,200 recipients</p>
+              </div>
+              <div className="bg-emerald-50 p-3 rounded-2xl border border-emerald-100 flex flex-col justify-center">
+                <span className="text-[9px] font-black uppercase tracking-wider text-emerald-700 block">Opt-In compliance</span>
+                <p className="text-[10px] text-emerald-800 font-bold mt-1">100% Opt-In Verified</p>
+              </div>
+            </div>
+            {/* Delivery Status Bars */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-2">Real-Time Delivery tracking</span>
+              <div className="space-y-1.5">
+                <div className="flex justify-between text-[9px] font-bold text-primary"><span>Delivered (98.4%)</span><span>13,972</span></div>
+                <div className="w-full h-1 bg-black/5 rounded-full overflow-hidden"><div className="h-full bg-emerald-500 w-[98.4%]"></div></div>
+                <div className="flex justify-between text-[9px] font-bold text-primary mt-1"><span>Read / Opened (87.2%)</span><span>12,382</span></div>
+                <div className="w-full h-1 bg-black/5 rounded-full overflow-hidden"><div className="h-full bg-secondary w-[87.2%]"></div></div>
+              </div>
+            </div>
+          </div>
+        )
+      case 'shift':
+        return (
+          <div className="w-full h-full flex flex-col gap-4 text-left p-2 sm:p-4">
+            {/* Exposure Dashboard */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-2">Exposure Dashboard</span>
+              <div className="grid grid-cols-3 gap-2 text-center">
+                <div className="bg-white p-2 rounded border border-black/5"><p className="text-black/40 text-[8px] font-bold">Impressions</p><p className="text-xs font-black text-primary">4.2M</p></div>
+                <div className="bg-white p-2 rounded border border-black/5"><p className="text-black/40 text-[8px] font-bold">Frequency</p><p className="text-xs font-black text-primary">3.1x</p></div>
+                <div className="bg-white p-2 rounded border border-black/5"><p className="text-black/40 text-[8px] font-bold">Reach Rate</p><p className="text-xs font-black text-emerald-600">89.4%</p></div>
+              </div>
+            </div>
+            {/* Brand Lift Trend */}
+            <div className="bg-slate-50 p-4 rounded-2xl border border-black/5">
+              <span className="text-[10px] font-black uppercase tracking-wider text-black/50 block mb-2">Brand Lift Trend (+18.4% Lift)</span>
+              <div className="h-20 relative flex items-end">
+                <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+                  <path d="M0,80 Q25,70 50,45 T100,10" fill="none" stroke="#F07E25" strokeWidth="2.5" vectorEffect="non-scaling-stroke" />
+                  <path d="M0,80 Q25,70 50,45 T100,10 L100,100 L0,100 Z" fill="url(#shiftGrad)" opacity="0.15" />
+                  <defs>
+                    <linearGradient id="shiftGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="#F07E25"/>
+                      <stop offset="100%" stopColor="#F07E25" stopOpacity="0"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            {/* Live Optimisation Indicators */}
+            <div className="bg-secondary/10 p-3.5 rounded-2xl border border-secondary/20 flex gap-2.5">
+              <span className="material-symbols-outlined text-secondary text-sm mt-0.5">dynamic_feed</span>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-wider text-secondary">Optimisation recommendation</span>
+                <p className="text-[10px] text-primary font-bold mt-0.5">Shift $32,000 from low-recall segments to video channels.</p>
+              </div>
+            </div>
+          </div>
+        )
+      default:
+        return null
     }
   }
 
   return (
-    <section className="py-16 lg:py-20 bg-white select-none" id="platform-tabs">
+    <section className="py-20 lg:py-28 bg-[#fafafa] select-none border-y border-black/5" id="suite">
       <div className="max-w-container-max mx-auto px-6 lg:px-margin-desktop">
         <div className="max-w-5xl mx-auto">
-          {/* Tabs Navigation Header */}
-          <div className="flex flex-wrap justify-center gap-4 lg:gap-12 border-b border-black/5 pb-2 mb-10 lg:mb-12">
+          
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-1.5 bg-white border border-black/5 rounded-full text-[10px] font-black text-secondary uppercase tracking-widest mb-6 shadow-sm">
+              THE PULSE 360 SUITE
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold tracking-tight text-primary mb-6">
+              Five connected products. One intelligence loop.
+            </h2>
+            <p className="text-text-grey text-lg sm:text-xl font-medium leading-relaxed">
+              Each Pulse 360 product solves a specific marketing challenge. Together, they create a system where market signals inform planning, brand rules guide execution, engagement captures response, and measurement improves the next decision.
+            </p>
+          </div>
+
+          {/* Desktop Tabs UI */}
+          <div className="hidden lg:block">
+            {/* Tabs Navigation */}
+            <div className="flex justify-center gap-4 border-b border-black/5 pb-6 mb-12">
+              {tabs.map((tab) => {
+                const isActive = activeTab === tab.id
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`font-display font-black text-[11px] uppercase tracking-widest px-5 py-3 rounded-xl transition-all relative overflow-hidden ${
+                      isActive 
+                        ? 'text-secondary bg-secondary/10 border-b-2 border-secondary font-black' 
+                        : 'text-black/40 hover:text-primary hover:bg-slate-100/50'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                )
+              })}
+            </div>
+
+            {/* Dynamic Content Grid (Desktop) */}
+            <div className="grid lg:grid-cols-12 gap-16 items-center min-h-[500px]">
+              {/* Product Info (Headline first, Description second, Features third, Chips fourth) */}
+              <div className="lg:col-span-6">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeTab}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.25 }}
+                    className="space-y-6 text-left"
+                  >
+                    <h3 className="text-3xl xl:text-4xl font-extrabold tracking-tight leading-tight text-primary">
+                      {tabData[activeTab].headline}
+                    </h3>
+                    <p className="text-text-grey text-lg leading-relaxed font-medium">
+                      {tabData[activeTab].desc}
+                    </p>
+                    <ul className="space-y-4 pt-2">
+                      {tabData[activeTab].features.map((feat, idx) => (
+                        <li key={idx} className="flex items-start gap-3 font-semibold text-sm text-primary">
+                          <span className="material-symbols-outlined text-secondary shrink-0 text-xl">check_circle</span>
+                          <span className="mt-0.5">{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="flex gap-2 flex-wrap pt-4">
+                      {tabData[activeTab].chips.map((chip, idx) => (
+                        <span 
+                          key={idx} 
+                          className="px-4 py-2 rounded-full bg-white text-[10px] font-black uppercase tracking-widest text-primary border border-black/10 shadow-sm"
+                        >
+                          {chip}
+                        </span>
+                      ))}
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Graphic/Visual Side */}
+              <div className="lg:col-span-6 relative rounded-[2rem] shadow-xl bg-white p-6 border border-black/5 flex items-center justify-center min-h-[460px] max-h-[500px] overflow-hidden">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeTab}
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.96 }}
+                    transition={{ duration: 0.25 }}
+                    className="w-full h-full"
+                  >
+                    {renderVisual(activeTab)}
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Accordion UI */}
+          <div className="lg:hidden space-y-4">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id
               return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`font-black text-[11px] uppercase tracking-widest px-4 pb-4 transition-all ${
-                    isActive ? 'text-secondary border-b-2 border-secondary' : 'text-black/30 hover:text-secondary'
-                  }`}
-                >
-                  {tab.label}
-                </button>
+                <div key={tab.id} className="bg-white rounded-2xl border border-black/5 shadow-sm overflow-hidden transition-all">
+                  <button
+                    onClick={() => setActiveTab(isActive ? '' : tab.id)}
+                    className="w-full px-6 py-5 flex items-center justify-between text-left"
+                  >
+                    <span className={`font-display font-black text-sm uppercase tracking-widest ${isActive ? 'text-secondary' : 'text-primary'}`}>
+                      {tab.label}
+                    </span>
+                    <span className={`material-symbols-outlined transition-transform duration-300 ${isActive ? 'rotate-180 text-secondary' : 'text-black/30'}`}>
+                      keyboard_arrow_down
+                    </span>
+                  </button>
+                  <AnimatePresence>
+                    {isActive && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-6 pb-8 space-y-6">
+                          <h3 className="text-2xl font-extrabold tracking-tight text-primary">
+                            {tabData[tab.id].headline}
+                          </h3>
+                          <p className="text-text-grey text-sm font-medium">
+                            {tabData[tab.id].desc}
+                          </p>
+                          <ul className="space-y-3">
+                            {tabData[tab.id].features.map((feat, idx) => (
+                              <li key={idx} className="flex items-start gap-3 font-semibold text-xs text-primary">
+                                <span className="material-symbols-outlined text-secondary shrink-0 text-lg">check_circle</span>
+                                <span className="mt-0.5">{feat}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="pt-2 pb-6 border-t border-black/5 mt-4">
+                            {renderVisual(tab.id)}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               )
             })}
           </div>
 
-          {/* Dynamic Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTab}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.3 }}
-                className="space-y-8 text-left"
-              >
-                <div className="inline-block px-3 py-1 bg-secondary/10 rounded text-[10px] font-black text-secondary uppercase tracking-widest">
-                  {tabData[activeTab].category}
-                </div>
-                <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight text-primary">
-                  {tabData[activeTab].title}
-                </h3>
-                <p className="text-on-surface/60 text-lg leading-relaxed">
-                  {tabData[activeTab].desc}
-                </p>
-                <ul className="space-y-4">
-                  {tabData[activeTab].features.map((feat, idx) => (
-                    <li key={idx} className="flex items-center gap-3 font-bold text-sm text-on-surface">
-                      <span className="material-symbols-outlined text-secondary shrink-0">verified</span>
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex gap-2">
-                  {tabData[activeTab].tags.map((tag, idx) => (
-                    <span 
-                      key={idx} 
-                      className="px-4 py-2 rounded-full bg-slate-50 text-[10px] font-black uppercase tracking-widest text-black/40 border border-black/5"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Graphic/Visual Side */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square bg-slate-100 p-4 sm:p-8 border border-black/5 flex items-center justify-center">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeTab}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.3 }}
-                  className="w-full h-full flex items-center justify-center"
-                >
-                  {tabData[activeTab].visual}
-                </motion.div>
-              </AnimatePresence>
-              <div className="absolute inset-0 bg-gradient-to-tr from-secondary/5 to-transparent pointer-events-none"></div>
-            </div>
+          {/* Connection Line & CTA */}
+          <div className="mt-16 pt-16 border-t border-black/5 text-center">
+            <p className="text-primary font-bold text-lg lg:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+              Scout informs Plan. Brand Book governs execution. Engage activates audiences. Shift measures impact. Learning feeds back into the system.
+            </p>
+            <button 
+              onClick={onBookDemo}
+              className="bg-primary text-white border border-secondary px-8 py-3.5 rounded-full font-black text-base hover:scale-105 active:scale-95 transition-all shadow-xl shadow-secondary/20 hover:bg-gradient-to-r hover:from-secondary hover:to-deep-orange hover:border-transparent"
+            >
+              Book a Demo
+            </button>
           </div>
+
         </div>
       </div>
     </section>

@@ -20,100 +20,116 @@ export default function Navbar({ onBookDemo }) {
 
   return (
     <nav 
-      className="fixed top-0 w-full z-[100] transition-all duration-300 glass-nav" 
+      className={`fixed top-0 w-full z-[100] transition-all duration-500 border-b ${
+        isScrolled 
+          ? 'bg-white/80 backdrop-blur-xl border-black/5 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] py-1' 
+          : 'bg-transparent border-transparent py-4'
+      }`}
       id="main-nav"
-      style={{
-        boxShadow: isScrolled ? '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)' : 'none',
-        background: isScrolled ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0.7)'
-      }}
     >
-      <div className="max-w-container-max mx-auto px-6 lg:px-margin-desktop h-20 flex justify-between items-center">
+      <div className="max-w-container-max mx-auto px-6 lg:px-margin-desktop h-16 flex justify-between items-center transition-all duration-500">
         <div className="flex items-center gap-12">
-          <a href="#" className="font-display-lg text-2xl font-extrabold tracking-tighter text-primary select-none">
+          <a href="#" className="font-display-lg text-2xl font-extrabold tracking-tighter text-primary select-none flex items-center gap-2 group">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-slate-800 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <span className="text-white text-sm font-black tracking-widest">P</span>
+            </div>
             Pulse 360
           </a>
-          <div className="hidden lg:flex gap-8">
-            <a className="text-sm font-semibold text-on-surface/70 hover:text-secondary transition-colors" href="#platform">Platform</a>
-            <a className="text-sm font-semibold text-on-surface/70 hover:text-secondary transition-colors" href="#solutions">Solutions</a>
-            <a className="text-sm font-semibold text-on-surface/70 hover:text-secondary transition-colors" href="#customers">Customers</a>
-            <a className="text-sm font-semibold text-on-surface/70 hover:text-secondary transition-colors" href="#pricing">Pricing</a>
+          
+          <div className="hidden lg:flex items-center gap-1 bg-black/5 rounded-full px-2 py-1.5 backdrop-blur-sm border border-black/5">
+            {['Platform', 'Suite', 'Outcomes', 'Teams'].map((item) => (
+              <a 
+                key={item}
+                className="text-sm font-semibold text-on-surface/80 hover:text-primary hover:bg-white px-5 py-2 rounded-full transition-all duration-300 cursor-pointer" 
+                href={`#${item.toLowerCase()}`}
+              >
+                {item}
+              </a>
+            ))}
           </div>
         </div>
         
-        <div className="flex items-center gap-6">
-          <button className="text-sm font-bold text-on-surface/80 hover:text-secondary transition-colors hidden sm:inline-block">
-            Log in
-          </button>
+        <div className="flex items-center gap-4">
           <button
             onClick={onBookDemo}
-            className="bg-primary text-on-primary px-7 py-2.5 rounded-full text-sm font-extrabold active:scale-95 transition-all shadow-md hover:bg-secondary"
+            className="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-extrabold hover:scale-105 active:scale-95 transition-all shadow-[0_8px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_10px_25px_rgba(240,126,37,0.25)] hover:bg-gradient-to-r hover:from-secondary hover:to-[#F1620F]"
           >
             Book a Demo
           </button>
+          
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-on-surface hover:text-secondary rounded-lg transition-colors"
+            className="lg:hidden p-2.5 text-primary hover:bg-black/5 rounded-full transition-all relative z-50 ml-2 bg-white shadow-sm border border-black/5"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <motion.div
+              animate={{ rotate: isOpen ? 90 : 0 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </motion.div>
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Premium Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-black/5 bg-white/95 backdrop-blur-xl shadow-xl overflow-hidden"
-          >
-            <div className="px-6 py-6 space-y-4">
-              <a
-                href="#platform"
-                onClick={() => setIsOpen(false)}
-                className="block text-base font-semibold text-on-surface/70 hover:text-secondary py-2"
-              >
-                Platform
-              </a>
-              <a
-                href="#solutions"
-                onClick={() => setIsOpen(false)}
-                className="block text-base font-semibold text-on-surface/70 hover:text-secondary py-2"
-              >
-                Solutions
-              </a>
-              <a
-                href="#customers"
-                onClick={() => setIsOpen(false)}
-                className="block text-base font-semibold text-on-surface/70 hover:text-secondary py-2"
-              >
-                Customers
-              </a>
-              <a
-                href="#pricing"
-                onClick={() => setIsOpen(false)}
-                className="block text-base font-semibold text-on-surface/70 hover:text-secondary py-2"
-              >
-                Pricing
-              </a>
-              <div className="pt-4 flex flex-col gap-4 border-t border-black/5">
-                <button className="w-full py-3 text-center text-sm font-bold text-on-surface/80 hover:text-secondary transition-colors">
-                  Log in
-                </button>
-                <button
-                  onClick={() => {
-                    setIsOpen(false)
-                    onBookDemo()
-                  }}
-                  className="w-full bg-primary text-on-primary py-3 rounded-full text-sm font-extrabold text-center hover:bg-secondary transition-colors"
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden top-[72px]"
+            />
+            
+            {/* Drawer Content */}
+            <motion.div
+              initial={{ opacity: 0, y: -20, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.98 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="absolute top-full left-4 right-4 mt-2 lg:hidden bg-white/95 backdrop-blur-2xl rounded-3xl shadow-2xl border border-black/10 overflow-hidden z-50"
+            >
+              <div className="p-6 space-y-2">
+                {['Platform', 'Suite', 'Outcomes', 'Teams'].map((item, i) => (
+                  <motion.a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    onClick={() => setIsOpen(false)}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05 }}
+                    className="flex items-center justify-between text-xl font-display font-extrabold text-primary hover:bg-slate-50 p-4 rounded-2xl transition-all"
+                  >
+                    {item}
+                    <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                      <span className="text-secondary text-sm">→</span>
+                    </div>
+                  </motion.a>
+                ))}
+                
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="pt-6 mt-4 flex flex-col gap-3 border-t border-black/5"
                 >
-                  Book a Demo
-                </button>
+                  <button
+                    onClick={() => {
+                      setIsOpen(false)
+                      onBookDemo()
+                    }}
+                    className="w-full bg-primary text-white py-4 rounded-full text-sm font-extrabold text-center hover:bg-gradient-to-r hover:from-secondary hover:to-[#F1620F] hover:shadow-lg transition-all"
+                  >
+                    Book a Demo
+                  </button>
+                </motion.div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>

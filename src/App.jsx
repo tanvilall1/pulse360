@@ -124,8 +124,8 @@ export default function App() {
                         <Calendar className="w-5 h-5" />
                       </div>
                       <div>
-                        <h3 className="font-display font-extrabold text-xl text-on-surface">Book a Technical Demo</h3>
-                        <p className="text-xs text-on-surface-variant/70 font-mono mt-0.5">Custom 30-minute infrastructure consult</p>
+                        <h3 className="font-display font-extrabold text-xl text-on-surface">Book a Demo</h3>
+                        <p className="text-xs text-on-surface-variant/70 font-mono mt-0.5">Custom 30-minute walkthrough of Pulse 360</p>
                       </div>
                     </div>
 
@@ -179,10 +179,10 @@ export default function App() {
                           onChange={(e) => setFormData({ ...formData, size: e.target.value })}
                           className="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-xs text-on-surface focus:outline-none focus:border-secondary transition-colors cursor-pointer"
                         >
-                          <option value="1-10">1 - 10 developers</option>
-                          <option value="10-50">10 - 50 developers</option>
-                          <option value="50-250">50 - 250 developers</option>
-                          <option value="250+">250+ enterprise developers</option>
+                          <option value="1-10">1 - 10 team members</option>
+                          <option value="10-50">10 - 50 team members</option>
+                          <option value="50-250">50 - 250 team members</option>
+                          <option value="250+">250+ enterprise team</option>
                         </select>
                       </div>
 
@@ -193,7 +193,7 @@ export default function App() {
                           rows="3"
                           value={formData.note}
                           onChange={(e) => setFormData({ ...formData, note: e.target.value })}
-                          placeholder="Tell us what workflows you want to automate..."
+                          placeholder="Tell us about your marketing challenges..."
                           className="w-full bg-surface border border-outline-variant rounded-xl p-4 text-xs text-on-surface placeholder-on-surface-variant/40 focus:outline-none focus:border-secondary transition-colors resize-none"
                         />
                       </div>
@@ -210,11 +210,11 @@ export default function App() {
                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                               </svg>
-                              INITIATING PIPELINE ALLOCATION...
+                              SCHEDULING YOUR DEMO...
                             </span>
                           ) : (
                             <span className="flex items-center gap-2">
-                              Schedule Session
+                              Book a Demo
                               <ArrowRight className="w-4 h-4" />
                             </span>
                           )}
@@ -237,21 +237,21 @@ export default function App() {
                     <div className="space-y-2">
                       <h3 className="font-display font-extrabold text-2xl text-on-surface">Demo Scheduled!</h3>
                       <p className="text-on-surface-variant text-sm font-light max-w-sm mx-auto leading-relaxed">
-                        Excellent, <span className="text-secondary font-semibold">{formData.name}</span>. We've reserved a dedicated sandbox pipeline for <span className="text-on-surface font-medium">{formData.company}</span>.
+                        Excellent, <span className="text-secondary font-semibold">{formData.name}</span>. We'll be in touch shortly to schedule your Pulse 360 demo for <span className="text-on-surface font-medium">{formData.company}</span>.
                       </p>
                     </div>
 
                     <div className="p-4 rounded-2xl bg-surface-variant border border-outline-variant font-mono text-[10px] text-on-surface-variant space-y-1 w-full max-w-sm">
-                      <p className="flex justify-between"><span>ALLOCATED HOST</span><span className="text-emerald-500">AWS-US-EAST-1D</span></p>
-                      <p className="flex justify-between"><span>CONTACT ROUTE</span><span className="text-on-surface">{formData.email}</span></p>
-                      <p className="flex justify-between"><span>INVITATION TICKET</span><span className="text-secondary">#PULSE-DEMO-{Math.floor(1000 + Math.random() * 9000)}</span></p>
+                      <p className="flex justify-between"><span>CONTACT</span><span className="text-on-surface">{formData.email}</span></p>
+                      <p className="flex justify-between"><span>COMPANY</span><span className="text-on-surface">{formData.company}</span></p>
+                      <p className="flex justify-between"><span>REFERENCE</span><span className="text-secondary">#PULSE-{Math.floor(1000 + Math.random() * 9000)}</span></p>
                     </div>
 
                     <button
                       onClick={handleCloseModal}
                       className="px-6 py-2.5 rounded-full font-display font-medium text-xs text-on-surface bg-surface-variant border border-outline-variant hover:bg-on-surface/5 transition-all"
                     >
-                      Return to Dashboard
+                      Close
                     </button>
                   </motion.div>
                 )}

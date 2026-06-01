@@ -52,6 +52,17 @@
   animation: dash 20s linear infinite;
 }
 
+.pulse-line-vertical {
+  background: linear-gradient(to bottom, transparent, #F07E25, transparent);
+  background-size: 100% 200%;
+  animation: move-vertical-pulse 3s linear infinite;
+}
+
+@keyframes move-vertical-pulse {
+  0% { background-position: 0 -100%; }
+  100% { background-position: 0 100%; }
+}
+
 @keyframes dash {
   to { stroke-dashoffset: -1000; }
 }
