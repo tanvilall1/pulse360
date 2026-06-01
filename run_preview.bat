@@ -1,2 +1,6 @@
 @echo off
-"C:\Users\Tanvi Lall\node-portable\node-v20.18.0-win-x64\npm.cmd" run preview
+set PATH=C:\Users\Tanvi Lall\node-portable\node-v20.18.0-win-x64;%PATH%
+echo Building Pulse 360 website...
+call npm run build
+echo Starting local preview server on port 4173...
+call npm run preview -- --host --port 4173
